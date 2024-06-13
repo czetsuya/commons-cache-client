@@ -1,6 +1,6 @@
 package com.czetsuyatech.cache;
 
-import com.czetsuyatech.cache.dto.RefDataDTO;
+import com.czetsuyatech.persistence.dtos.RefDataDTO;
 import java.util.List;
 import java.util.Map;
 

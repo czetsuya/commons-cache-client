@@ -1,21 +1,22 @@
 package com.czetsuyatech.cache.client.persistence.entities;
 
+import com.czetsuyatech.persistence.entities.BusinessEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
-@Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table
-public class CountryEntity {
+@Entity(name = "country")
+@SuperBuilder
+public class CountryEntity extends BusinessEntity {
 
-  @Id
-  private Long id;
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Long getId() {
-    return id;
-  }
+  @Column(name = "iso_code_3")
+  private String isoCode3;
 }

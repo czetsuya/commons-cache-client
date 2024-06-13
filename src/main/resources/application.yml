@@ -1,0 +1,21 @@
+logging:
+  level:
+    root: info
+    com.czetsuyatech: debug
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: db_user
+    password: db_pass_123
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+  main:
+    allow-circular-references: true

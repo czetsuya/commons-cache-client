@@ -1,10 +1,18 @@
 package com.czetsuyatech.cache.client.services.dtos;
 
-import com.czetsuyatech.cache.dto.BaseRefDataDTO;
+import com.czetsuyatech.persistence.dtos.BaseRefDTO;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public class CountryDTO extends BaseRefDataDTO<Long> {
+@Getter
+@Setter
+@NoArgsConstructor
+public class CountryDTO extends BaseRefDTO<Long> {
 
-  public CountryDTO(BaseRefDataDTO<Long> other) {
+  private String isoCode3;
+
+  public CountryDTO(BaseRefDTO<Long> other) {
     super(other);
   }
 }
